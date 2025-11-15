@@ -1,0 +1,164 @@
+body {
+  margin: 0;
+  background-image: url('background.jpeg'); 
+  background-size: cover; 
+  background-attachment: fixed; 
+  background-position: center; 
+
+}
+
+h1 {
+  color: black;
+  text-align: center;
+  font-size: 3em;
+}
+
+.labelStyle{
+  font-weight: bold;
+}
+
+.board {
+  width: 100%;
+  background-color: blue;
+  border: 5px solid black;
+  align-items: center;
+  border-radius: 1px 1px 16px 16px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.board:empty,
+.player:empty {
+  display: none
+}
+
+.player {
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  background: blue;
+  padding: 10px;
+  border: 5px solid black;
+  border-bottom: 0px;
+  border-radius: 16px 16px 1px 1px;
+  box-sizing: border-box;
+
+}
+
+#winner {
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+  color: green;
+  animation: blinker 1s infinite;
+  padding: 5px;
+  width: max-content;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+input[type=number]{
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #555;
+  outline: none;
+  border-radius: 7px;
+}
+
+
+
+.buttonStyle {
+  border: none;
+  color: white;
+  padding: 8px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition: #0a4276 0.5s ease;
+  background-color: #0a4276;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.buttonStyle:hover {
+  background-color: black;
+}
+
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+tr {
+  display: flex;
+}
+
+td {
+  padding: 10px;
+  position: relative;
+  margin: 7px;
+  width: 30px;
+  height: 30px;
+  border: 2px solid black;
+  border-radius: 100px;
+  background-color: white;
+  cursor: pointer;
+  outline: none; /* Removes focus outline */
+  user-select: none;
+}
+
+td:hover::after {
+  content: '';
+  height: 10000px;
+  left: 0;
+  position: absolute;
+  top: -5000px;
+  width: 100%;
+}
+
+.controls {
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: min-content;
+}
+
+.inline-button {
+  display: inline-block;
+  width: max-content;
+}
+
+.message {
+  width: fit-content;
+  margin-top: 5%;
+  text-align: center;
+  font-size: 30px;
+}
+
+.title-circle {
+  height: 34px;
+  width: 54px;
+  background: yellow;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
+.player_name {
+  margin-left: 50px;
+  width: max-content;
+}
